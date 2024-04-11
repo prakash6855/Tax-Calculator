@@ -12,10 +12,16 @@ document.addEventListener("DOMContentLoaded", function() {
             element.classList.remove("error");
         });
         
-        if (isNaN(grossIncome) || isNaN(extraIncome) || ageGroup === "" || isNaN(taxDeduction)) {
-            inputElements.forEach(function(element) {
+        var hasError = false;
+        
+        inputElements.forEach(function(element) {
+            if (!element.checkValidity()) {
                 element.classList.add("error");
-            });
+                hasError = true;
+            }
+        });
+        
+        if (hasError) {
             return;
         }
         
