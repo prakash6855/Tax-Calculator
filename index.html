@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tax Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Tax Calculator</h2>
-        <form id="taxForm">
-            <div class="input-group">
-                <label for="grossIncome">Gross Income</label>
-                <div class="tooltip">
-                    <input type="number" id="grossIncome" placeholder="Enter gross income">
-                    <span class="tooltiptext">Enter your gross income</span>
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="extraIncome">Extra Income</label>
-                <div class="tooltip">
-                    <input type="number" id="extraIncome" placeholder="Enter extra income">
-                    <span class="tooltiptext">Enter any extra income</span>
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="ageGroup">Age Group</label>
-                <select id="ageGroup">
-                    <option value="" selected disabled>Select Age Group</option>
-                    <option value="below40">Below 40</option>
-                    <option value="40to60">40 to 60</option>
-                    <option value="above60">Above 60</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="taxDeduction">Tax Deductions</label>
-                <div class="tooltip">
-                    <input type="number" id="taxDeduction" placeholder="Enter tax deductions">
-                    <span class="tooltiptext">Enter total applicable tax deductions</span>
-                </div>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="result"></p>
+  <div class="container">
+    <h2>Tax Calculator</h2>
+    <form id="taxForm">
+      <div class="input-group">
+        <label for="grossIncome">Gross Income:</label>
+        <div class="tooltip">
+          <input id="grossIncome" placeholder="Enter gross income" />
+          <span class="tooltiptext">Enter your gross income</span>
         </div>
-    </div>
+      </div>
+      <div class="input-group">
+        <label for="extraIncome">Extra Income:</label>
+        <div class="tooltip">
+          <input id="extraIncome" placeholder="Enter extra income" />
+          <span class="tooltiptext">Enter any extra income</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="ageGroup">Age Group:</label>
+        <select id="ageGroup">
+          <option value="" selected disabled>Select Age Group</option>
+          <option value="below40">Below 40</option>
+          <option value="40to60">40 to 60</option>
+          <option value="above60">Above 60</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="taxDeduction">Tax Deductions:</label>
+        <div class="tooltip">
+          <input id="taxDeduction" placeholder="Enter tax deductions" />
+          <span class="tooltiptext">Enter total applicable tax deductions</span>
+        </div>
+      </div>
+      <button type="submit">Calculate Tax</button>
+    </form>
+  </div>
 
-    <script src="script.js" defer></script>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
