@@ -78,14 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showModal(message) {
     var modal = document.getElementById("myModal");
-    var resultElement = document.getElementById("result");
-    var modalContent = document.querySelector(".modal-content");
-
+    var resultElement = document.getElementById("netAmount");
     resultElement.textContent = message;
-    modalContent.innerHTML =
-      "<p>Your overall income after tax deductions will be:</p>" +
-      resultElement.outerHTML +
-      "<Button class='close'>Close</Button>";
     modal.style.display = "block";
   }
 });

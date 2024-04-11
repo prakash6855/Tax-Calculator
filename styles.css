@@ -109,7 +109,7 @@ button:hover {
   font-size: 18px;
   cursor: pointer;
   width: auto;
-  top: 34%;
+  top: 54%;
 }
 
 .modal-content p {
@@ -120,4 +120,11 @@ button:hover {
 .close:hover,
 .close:focus {
   color: black;
+}
+
+#result {
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
