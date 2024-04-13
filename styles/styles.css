@@ -112,10 +112,6 @@ button:hover {
   top: 54%;
 }
 
-.modal-content p {
-  margin-bottom: 20px;
-  text-align: center;
-}
 
 .close:hover,
 .close:focus {
