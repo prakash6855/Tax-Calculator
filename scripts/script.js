@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const taxableIncome = grossIncome + extraIncome - taxDeduction - 8;
-    if (taxableIncome <= 0) {
-      showModal("No tax applicable.");
+    const taxableIncome = grossIncome + extraIncome - taxDeduction;
+    if (taxableIncome <= 800000) {
+      showModal("No tax applicable. i.e. 0.0");
     } else {
       let taxRate;
       if (ageGroup === "below40") {
@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (ageGroup === "above60") {
         taxRate = 0.1;
       } else {
-        showModal("Please select age group.");
+        showToast("Please select Valid Age group.", 5000);
         return;
       }
       const taxAmount = taxRate * taxableIncome;
-      showModal("Tax amount: " + taxAmount.toFixed(2) + " Lakhs");
+      showModal("Tax amount: " + taxAmount.toFixed(2));
     }
   });
 
