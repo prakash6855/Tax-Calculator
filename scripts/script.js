@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const input = document.querySelectorAll("input");
+  input.forEach((inputElements) => {
+    inputElements.addEventListener("input", (e) => {
+      // Get the entered value
+      var enteredValue = e.target.value.trim();
+
+      // Check if the entered value is a number
+      if (!isNumeric(enteredValue)) {
+        // Apply red color warning
+        e.target.style.borderColor = "red";
+      } else {
+        // Remove red color warning
+        e.target.style.borderColor = "";
+      }
+    });
+  });
+
   document.getElementById("taxForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -83,3 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "block";
   }
 });
+
+// Function to check if a value is numeric
+function isNumeric(value) {
+  return !isNaN(parseFloat(value)) && isFinite(value);
+}
