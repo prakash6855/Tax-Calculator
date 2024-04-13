@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   input.forEach((inputElements) => {
     inputElements.addEventListener("input", (e) => {
       // Get the entered value
-      var enteredValue = e.target.value.trim();
+      const enteredValue = e.target.value.trim();
 
       // Check if the entered value is a number
       if (!isNumeric(enteredValue)) {
@@ -18,22 +18,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("taxForm").addEventListener("submit", function (e) {
     e.preventDefault();
-
-    var grossIncome = parseFloat(document.getElementById("grossIncome").value);
-    var extraIncome = parseFloat(document.getElementById("extraIncome").value);
-    var ageGroup = document.getElementById("ageGroup").value;
-    var taxDeduction = parseFloat(
+    const grossIncome = parseFloat(
+      document.getElementById("grossIncome").value
+    );
+    const extraIncome = parseFloat(
+      document.getElementById("extraIncome").value
+    );
+    const ageGroup = document.getElementById("ageGroup").value;
+    const taxDeduction = parseFloat(
       document.getElementById("taxDeduction").value
     );
 
-    var inputElements = document.querySelectorAll(
+    var errorOcuuredDuringValidationOfTypes = false;
+    [grossIncome, extraIncome, taxDeduction].forEach((element) => {
+      if (isNaN(element)) {
+        errorOcuuredDuringValidationOfTypes = true;
+        showToast("Invalid Input, Please Enter Valid Numbers in Entries", 5000);
+        return;
+      }
+    });
+    if (errorOcuuredDuringValidationOfTypes) {
+      return;
+    }
+
+    const inputElements = document.querySelectorAll(
       ".input-group input, .input-group select"
     );
     inputElements.forEach(function (element) {
       element.classList.remove("error");
     });
 
-    var hasError = false;
+    const hasError = false;
 
     inputElements.forEach(function (element) {
       if (!element.checkValidity()) {
@@ -46,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    var taxableIncome = grossIncome + extraIncome - taxDeduction - 8;
+    const taxableIncome = grossIncome + extraIncome - taxDeduction - 8;
     if (taxableIncome <= 0) {
       showModal("No tax applicable.");
     } else {
-      var taxRate;
+      let taxRate;
       if (ageGroup === "below40") {
         taxRate = 0.3;
       } else if (ageGroup === "40to60") {
@@ -61,14 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
         showModal("Please select age group.");
         return;
       }
-      var taxAmount = taxRate * taxableIncome;
+      const taxAmount = taxRate * taxableIncome;
       showModal("Tax amount: " + taxAmount.toFixed(2) + " Lakhs");
     }
   });
 
-  var tooltips = document.querySelectorAll(".tooltip");
+  const tooltips = document.querySelectorAll(".tooltip");
   tooltips.forEach(function (tooltip) {
-    var tooltipText = tooltip.querySelector(".tooltiptext");
+    const tooltipText = tooltip.querySelector(".tooltiptext");
     tooltip.addEventListener("mouseenter", function () {
       tooltipText.style.visibility = "visible";
     });
@@ -77,25 +92,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var closeModal = function () {
+  const closeModal = function () {
     document.getElementById("myModal").style.display = "none";
   };
 
-  var closeButtons = document.querySelectorAll(".close");
+  const closeButtons = document.querySelectorAll(".close");
   closeButtons.forEach(function (button) {
     button.addEventListener("click", closeModal);
   });
 
   window.addEventListener("click", function (event) {
-    var modal = document.getElementById("myModal");
+    const modal = document.getElementById("myModal");
     if (event.target == modal) {
       closeModal();
     }
   });
 
   function showModal(message) {
-    var modal = document.getElementById("myModal");
-    var resultElement = document.getElementById("netAmount");
+    const modal = document.getElementById("myModal");
+    const resultElement = document.getElementById("netAmount");
     resultElement.textContent = message;
     modal.style.display = "block";
   }
@@ -104,4 +119,14 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to check if a value is numeric
 function isNumeric(value) {
   return !isNaN(parseFloat(value)) && isFinite(value);
+}
+// Custom Toaster
+function showToast(message, duration) {
+  var toaster = document.getElementById("toaster");
+  toaster.textContent = message;
+  toaster.style.display = "block";
+
+  setTimeout(function () {
+    toaster.style.display = "none";
+  }, duration);
 }
