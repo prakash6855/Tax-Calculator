@@ -32,6 +32,30 @@ A simple web application for calculating taxes based on gross income, extra inco
 - CSS
 - JavaScript
 
+## Test Cases
+
+1. Input Validation:
+![Input Validation](./assets/Input%20Validation.png?raw=true "Input Validation")
+
+2. All fields required:
+![All fields required](./assets/Required%20Fields.png?raw=true "All fields required")
+
+3. Zero Tax:
+![Zero Tax](./assets/Zero%20Tax(1).png?raw=true "Zero Tax")
+![Zero Tax](./assets/Zero%20Tax(2).png?raw=true "Zero Tax")
+
+4.Net Taxable Income > 8Lakhs and Age Below 40:
+![Net Taxable Income > 8Lakhs and Age Below 40](./assets/Age%20<%2040(0).png?raw=true "Net Taxable Income > 8Lakhs and Age Below 40")
+![Net Taxable Income > 8Lakhs and Age Below 40](./assets/Age%20<%2040(1).png?raw=true "Net Taxable Income > 8Lakhs and Age Below 40")
+
+5.Net Taxable Income > 8Lakhs and Age Between 40 to 60:
+![Net Taxable Income > 8Lakhs and Age Between 40 to 60](./assets/Age%20Between%2040%20to%2060(0).png?raw=true "Net Taxable Income > 8Lakhs and Age Between 40 to 60")
+![Net Taxable Income > 8Lakhs and Age Between 40 to 60](./assets/Age%20Between%2040%20to%2060(1).png?raw=true "Net Taxable Income > 8Lakhs and Age Between 40 to 60")
+
+4.Net Taxable Income > 8Lakhs and Age Greater than 60:
+![Net Taxable Income > 8Lakhs and Age Greater than 60](./assets/Age%20>%2060(0).png?raw=true "Net Taxable Income > 8Lakhs and Age Greater than 60")
+![Net Taxable Income > 8Lakhs and Age Greater than 60](./assets/Age%20>%2060(1).png?raw=true "Net Taxable Income > 8Lakhs and Age Greater than 60")
+
 ## How to Use
 
 1. Enter your gross income, extra income, select your age group, and enter tax deductions.
