@@ -20,13 +20,13 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  margin-left: -45%;
+  margin-left: -38%;
 }
 .age label {
-  margin-left: -47%;
+  margin-left: -42%;
 }
 .tax label {
-  margin-left: -43%;
+  margin-left: -35%;
 }
 input,
 select,
