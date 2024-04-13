@@ -14,14 +14,20 @@
           <label for="grossIncome">Gross Income:</label>
           <div class="tooltip">
             <input id="grossIncome" placeholder="Enter gross income" required />
-            <span class="tooltiptext">Enter your gross income</span>
+            <span class="tooltiptext"
+              >Gross Income is total Salary in a Year without deduction
+            </span>
+            <span class="tooltip-icon">ℹ️</span>
           </div>
         </div>
         <div class="input-group">
           <label for="extraIncome">Extra Income:</label>
           <div class="tooltip">
             <input id="extraIncome" placeholder="Enter extra income" required />
-            <span class="tooltiptext">Enter any extra income</span>
+            <span class="tooltiptext"
+              >Extra Income is extra incpme earned in a Year without deduction
+            </span>
+            <span class="tooltip-icon">ℹ️</span>
           </div>
         </div>
         <div class="input-group age">
@@ -42,13 +48,15 @@
               required
             />
             <span class="tooltiptext"
-              >Enter total applicable tax deductions</span
-            >
+              >Tax Deduction is the tax rebate that you received for a fiscal
+              Year
+            </span>
+            <span class="tooltip-icon">ℹ️</span>
           </div>
         </div>
         <div id="toaster" class="toaster"></div>
 
-        <button type="submit">Calculate Tax</button>
+        <button type="submit" class="submit">Calculate Tax</button>
       </form>
     </div>
 
