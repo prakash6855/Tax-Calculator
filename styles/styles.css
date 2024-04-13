@@ -107,13 +107,9 @@ button:hover {
 }
 
 .close {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   color: black;
   cursor: pointer;
   width: auto;
-  top: 65%;
 }
 
 .close:hover,
