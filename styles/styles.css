@@ -1,7 +1,6 @@
 .container {
   max-width: 45vw;
   margin: 20vh auto;
-  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -9,17 +8,17 @@
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 5vh;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 2vh;
 }
 
 label {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 1vh;
   margin-left: -38%;
 }
 .age label {
@@ -34,7 +33,7 @@ button {
   padding: 1vh;
   margin: 5px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 1vh;
   box-sizing: border-box;
   width: 25vw;
 }
@@ -43,7 +42,7 @@ button {
   margin-left: -3%;
 }
 .tooltip {
-  width: calc(100% - 20px);
+  width: calc(100% - 2vw);
   position: relative;
 }
 .tooltip-icon {
@@ -60,13 +59,13 @@ button {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 10vw;
   background-color: #555;
   color: white;
   font-style: italic;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px;
+  border-radius: 1vh;
+  padding: 1vh;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -99,12 +98,12 @@ button:hover {
 .modal-content {
   background-color: #fefefe;
   margin: 10% auto;
-  padding: 30px;
+  padding: 5vw;
   border: none;
   width: 60%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 40vw;
+  border-radius: 2vh;
+  box-shadow: 0 0 5vw rgba(0, 0, 0, 0.2);
 }
 
 .close {
@@ -112,10 +111,10 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   color: black;
-  font-size: 18px;
+  font-size: 1.5vw;
   cursor: pointer;
   width: auto;
-  top: 56%;
+  top: 67%;
 }
 
 .close:hover,
@@ -137,8 +136,8 @@ button:hover {
   transform: translateX(-50%);
   background-color: #c91010;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 2vh 4vh;
+  border-radius: 1vh;
   display: none;
 }
 .submit {
