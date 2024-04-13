@@ -1,55 +1,55 @@
 .container {
-  max-width: 45vw;
-  margin: 20vh auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 30%;
+  margin: 10% auto;
+  border: 1% solid #ccc;
+  border-radius: 1%;
+  box-shadow: 0 0 1% rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 h2 {
-  margin-bottom: 5vh;
+  margin-bottom: 5%;
 }
 
 .input-group {
-  margin-bottom: 2vh;
+  margin-bottom: 5%;
 }
 
 label {
   display: block;
   font-weight: bold;
-  margin-bottom: 1vh;
-  margin-left: -38%;
-}
-.age label {
-  margin-left: -42%;
-}
-.tax label {
-  margin-left: -35%;
+  margin-bottom: 1%;
+  text-align: initial;
 }
 input,
-select,
 button {
-  padding: 1vh;
-  margin: 5px 0;
+  padding: 1%;
+  margin: 1% 0;
   border: 1px solid #ccc;
-  border-radius: 1vh;
+  border-radius: 1%;
   box-sizing: border-box;
-  width: 25vw;
+  width: -webkit-fill-available;
+  width: 100%;
+}
+select {
+  padding: 1%;
+  margin: 1% 0;
+  border: 1px solid #ccc;
+  border-radius: 1%;
+  box-sizing: border-box;
+  width: -webkit-fill-available;
+  width: 100% !important;
 }
 #ageGroup {
-  width: 25vw;
-  margin-left: -3%;
+  width: 55%;
 }
 .tooltip {
-  width: calc(100% - 2vw);
   position: relative;
 }
 .tooltip-icon {
   position: absolute;
-  top: 50%;
-  right: 22%;
-  transform: translateY(-50%);
+  bottom: 25%;
+  left: 95%;
   cursor: pointer;
 }
 .tooltip-icon:hover + .tooltiptext {
@@ -111,10 +111,9 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   color: black;
-  font-size: 1.5vw;
   cursor: pointer;
   width: auto;
-  top: 67%;
+  top: 65%;
 }
 
 .close:hover,
@@ -139,7 +138,4 @@ button:hover {
   padding: 2vh 4vh;
   border-radius: 1vh;
   display: none;
-}
-.submit {
-  margin-left: -2%;
 }
